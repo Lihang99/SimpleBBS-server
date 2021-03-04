@@ -3,6 +3,8 @@ mode: "dev"
 port: "8080"
 version: "v0.0.1"
 start_time: "2021-03-02"
+machine_id: 1
+md5_secret: "SimpleBBS"
 
 log:
   level: "info"
@@ -10,6 +12,7 @@ log:
   max_size: 200
   max_age: 30
   max_backups: 7
+
 mysql:
   host: 127.0.0.1
   port: 13306
@@ -18,9 +21,15 @@ mysql:
   dbname: "SimpleBBS"
   max_open_conns: 200
   max_idle_coons: 50
+
 redis:
   host: 127.0.0.1
   port: 6379
   password: ""
   db: 6
   pool_size: 100
+
+jwt:
+  secret: "leo99"
+  # 过期时间 单位：小时
+  expire_duration: 2

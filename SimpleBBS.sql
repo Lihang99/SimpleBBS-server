@@ -6,7 +6,7 @@ create table `user`
     `user_id`     bigint(20)  not null,
     `username`    varchar(64) not null,
     `password`    varchar(64) not null,
-    `email`       varchar(64) not null,
+    `email`       varchar(64),
     `gender`      tinyint(4)  not null default '0',
     `create_time` timestamp   not null default current_timestamp,
     `update_time` timestamp   not null default current_timestamp on update current_timestamp,
